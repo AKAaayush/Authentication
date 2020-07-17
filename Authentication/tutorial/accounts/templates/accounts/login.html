@@ -1,0 +1,27 @@
+
+    {% extends 'accounts/base.html' %}
+    {% load static %}
+ 
+    {% block body %}
+
+<div class="container">
+        
+    <h1>welcome to login page.</h1>
+    <!-- <button type="button" class="btn btn-primary">Primary</button>
+    <h1>{{ myName }}</h1>
+    
+        {% for number in numbers %}
+        <h1>{{ number }}</h1>
+        {% endfor %} -->
+        <p>You can login here.</p>
+        <h2>Login</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+    
+</div
+
+{% endblock %}
+

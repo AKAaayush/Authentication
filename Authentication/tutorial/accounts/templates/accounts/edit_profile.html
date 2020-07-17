@@ -1,0 +1,17 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+
+{% block body %}
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="file" name="image" accept="image/*" id="id_image">
+        <button type="submit">Submite</button>
+        
+    </form>
+</div>
+
+    
+{% endblock %}
